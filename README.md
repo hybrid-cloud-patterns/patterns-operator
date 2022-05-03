@@ -5,10 +5,8 @@ References:
 
 
 ## Deploy the operator
-```
- make deploy
-```
-This creates a new Deployment that points to the pre-built image on quay
+
+Search OperatorHub for "pattern" and accept all the defaults
 
 ## Create the Multi-Cloud GitOps pattern
 
@@ -109,7 +107,7 @@ git add operators/patterns-operator/$VERSION/
 git commit -s -m "New v$VERSION validated patterns operator release"
 git push
 cd operators/patterns-operator
-diff -ur `ls -1t | head -n 2`
+diff -ur `ls -1tr | head -n 2 | sort` 
 
 echo "Now create a PR against https://github.com/redhat-openshift-ecosystem/community-operators-prod"
 ```
